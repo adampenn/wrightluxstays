@@ -2,7 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+
+const LOGO_URL =
+  "https://static.wixstatic.com/media/51ee30_0f79b52be3424a13b81584fedc0f0925~mv2.jpg/v1/crop/x_94,y_102,w_464,h_464/fill/w_200,h_200,al_c,q_90/WrightLuxStays.jpg";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,17 +44,22 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
+            <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border-2 border-[#C9A84C]/40">
+              <Image
+                src={LOGO_URL}
+                alt="Wright Lux Stays"
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </div>
             <div className="flex flex-col leading-none">
               <span
                 className={`font-[family-name:var(--font-playfair)] text-xl font-bold tracking-wide ${textColor} transition-colors`}
               >
                 Wright Lux Stays
               </span>
-              <span
-                className={`text-xs tracking-[0.2em] uppercase ${
-                  isHome && !isScrolled ? "text-[#C9A84C]" : "text-[#C9A84C]"
-                } font-[family-name:var(--font-inter)]`}
-              >
+              <span className="text-xs tracking-[0.2em] uppercase text-[#C9A84C] font-[family-name:var(--font-inter)]">
                 Luxury Vacation Rentals
               </span>
             </div>

@@ -9,11 +9,17 @@ export type Property = {
   address: string;
   description: string;
   features: string[];
-  image: string; // Unsplash placeholder
+  image: string;
   images: string[];
-  // TODO: Replace with your actual Guesty booking widget embed URL
   guestyBookingUrl: string;
 };
+
+// Helper to build a full-res Wix image URL
+const wix = (id: string, w = 1200, h = 800) =>
+  `https://static.wixstatic.com/media/${id}/v1/fill/w_${w},h_${h},al_c,q_90/${id}`;
+
+export const LOGO_URL =
+  "https://static.wixstatic.com/media/51ee30_0f79b52be3424a13b81584fedc0f0925~mv2.jpg/v1/crop/x_94,y_102,w_464,h_464/fill/w_200,h_200,al_c,q_90/WrightLuxStays.jpg";
 
 export const properties: Property[] = [
   {
@@ -37,14 +43,12 @@ export const properties: Property[] = [
       "Private parking",
       "Minutes to Cornerstone Gardens & top wineries",
     ],
-    image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+    image: wix("51ee30_f091860c7687488c918d92d68067f7ec~mv2.jpg"),
     images: [
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
+      wix("51ee30_f091860c7687488c918d92d68067f7ec~mv2.jpg"),
+      wix("51ee30_2337bc5eb9354c71947468cde73d468d~mv2.jpg"),
+      wix("51ee30_25519d951d77434494d70e9a1c5b888f~mv2.jpg"),
     ],
-    // TODO: Replace with actual Guesty booking widget embed URL for this property
     guestyBookingUrl: "https://app.guesty.com/booking-widget/YOUR_PROPERTY_ID",
   },
   {
@@ -68,14 +72,12 @@ export const properties: Property[] = [
       "Private parking",
       "Close to Sonoma Plaza & top wineries",
     ],
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+    image: wix("51ee30_2337bc5eb9354c71947468cde73d468d~mv2.jpg"),
     images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1200&q=80",
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1200&q=80",
+      wix("51ee30_2337bc5eb9354c71947468cde73d468d~mv2.jpg"),
+      wix("51ee30_f091860c7687488c918d92d68067f7ec~mv2.jpg"),
+      wix("51ee30_25519d951d77434494d70e9a1c5b888f~mv2.jpg"),
     ],
-    // TODO: Replace with actual Guesty booking widget embed URL for this property
     guestyBookingUrl: "https://app.guesty.com/booking-widget/YOUR_PROPERTY_ID",
   },
   {
@@ -98,13 +100,11 @@ export const properties: Property[] = [
       "Smart TVs throughout",
       "Private parking",
     ],
-    image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80",
+    image: wix("51ee30_25519d951d77434494d70e9a1c5b888f~mv2.jpg"),
     images: [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80",
-      "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1200&q=80",
+      wix("51ee30_25519d951d77434494d70e9a1c5b888f~mv2.jpg"),
+      wix("51ee30_f091860c7687488c918d92d68067f7ec~mv2.jpg"),
     ],
-    // TODO: Replace with actual Guesty booking widget embed URL for this property
     guestyBookingUrl: "https://app.guesty.com/booking-widget/YOUR_PROPERTY_ID",
   },
   {
@@ -128,13 +128,12 @@ export const properties: Property[] = [
       "Private parking",
       "Close to top KC attractions",
     ],
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
+    image: wix("51ee30_f05c1ea063914c409616f1b7e803d53b~mv2.jpg"),
     images: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
-      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=1200&q=80",
+      wix("51ee30_f05c1ea063914c409616f1b7e803d53b~mv2.jpg"),
+      wix("51ee30_c6808f45667c4d12a2deaf58686001f8~mv2.jpg"),
+      wix("51ee30_448e3bff657040228babdcd2893ebe67~mv2.jpg"),
     ],
-    // TODO: Replace with actual Guesty booking widget embed URL for this property
     guestyBookingUrl: "https://app.guesty.com/booking-widget/YOUR_PROPERTY_ID",
   },
   {
@@ -157,13 +156,12 @@ export const properties: Property[] = [
       "Dedicated workspace",
       "Private parking",
     ],
-    image:
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&q=80",
+    image: wix("51ee30_b0d42b2174a847a6901d79e2d5ddfb19~mv2.jpg"),
     images: [
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&q=80",
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&q=80",
+      wix("51ee30_b0d42b2174a847a6901d79e2d5ddfb19~mv2.jpg"),
+      wix("51ee30_a0d561cbacf44ba6b3819908996a7211~mv2.jpg"),
+      wix("51ee30_448e3bff657040228babdcd2893ebe67~mv2.jpg"),
     ],
-    // TODO: Replace with actual Guesty booking widget embed URL for this property
     guestyBookingUrl: "https://app.guesty.com/booking-widget/YOUR_PROPERTY_ID",
   },
   {
@@ -187,14 +185,13 @@ export const properties: Property[] = [
       "High-speed WiFi",
       "In-home hair & beauty services available",
     ],
-    image:
-      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&q=80",
+    image: wix("51ee30_4c53474ba5ef42dcabd7e27fe3e9f992~mv2.jpg"),
     images: [
-      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&q=80",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=80",
-      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=1200&q=80",
+      wix("51ee30_4c53474ba5ef42dcabd7e27fe3e9f992~mv2.jpg"),
+      wix("51ee30_ade521b69d7d4db384d436bc85f31a8e~mv2.jpg"),
+      wix("51ee30_98f332f98b0f43f8983e3db1e86b4ba2~mv2.jpg"),
+      wix("51ee30_ea9048a335b4481e94dbdf8c4f77052a~mv2.jpg"),
     ],
-    // TODO: Replace with actual Guesty booking widget embed URL for this property
     guestyBookingUrl: "https://app.guesty.com/booking-widget/YOUR_PROPERTY_ID",
   },
   {
@@ -217,13 +214,15 @@ export const properties: Property[] = [
       "Kitchenette",
       "Walking distance to galleries & dining",
     ],
-    image:
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=80",
+    image: wix("51ee30_2fcc9b217cde41c989358fe3c033d37c~mv2.jpg"),
     images: [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=80",
+      wix("51ee30_2fcc9b217cde41c989358fe3c033d37c~mv2.jpg"),
+      wix("51ee30_71b50eb2af004023b10b743b52043452~mv2.jpg"),
+      wix("51ee30_381e0551342f472dbfc3c78c2e311311~mv2.jpg"),
+      wix("51ee30_a79fa0677e2d451c9254713a4af05674~mv2.jpg"),
+      wix("51ee30_21b26c3731424b81987c2385220de656~mv2.jpg"),
+      wix("51ee30_bee6e4e5ac414e6882f4b65073928994~mv2.jpg"),
     ],
-    // TODO: Replace with actual Guesty booking widget embed URL for this property
     guestyBookingUrl: "https://app.guesty.com/booking-widget/YOUR_PROPERTY_ID",
   },
 ];
@@ -235,8 +234,7 @@ export const locations = [
     tagline: "Wine Country Escapes",
     description:
       "Experience the magic of California Wine Country with our curated collection of luxury Sonoma Valley farmhouses. Sip award-winning wines, explore the iconic Sonoma Plaza, and unwind in vineyard surroundings.",
-    image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+    image: wix("51ee30_f091860c7687488c918d92d68067f7ec~mv2.jpg"),
   },
   {
     slug: "kansas-city",
@@ -244,8 +242,7 @@ export const locations = [
     tagline: "BBQ, Jazz & Urban Luxury",
     description:
       "Discover Kansas City's soulful charm from one of our beautifully appointed group homes. World-famous BBQ, live jazz, top sports, and Midwest hospitality await.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
+    image: wix("51ee30_f05c1ea063914c409616f1b7e803d53b~mv2.jpg"),
   },
   {
     slug: "austin",
@@ -253,8 +250,7 @@ export const locations = [
     tagline: "Keep It Weird, Keep It Luxurious",
     description:
       "Live music, incredible food, Lady Bird Lake, and South Congress — Austin has it all. Stay in our designer Travis Heights retreat and experience the real Austin.",
-    image:
-      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&q=80",
+    image: wix("51ee30_4c53474ba5ef42dcabd7e27fe3e9f992~mv2.jpg"),
   },
   {
     slug: "carmel",
@@ -262,7 +258,6 @@ export const locations = [
     tagline: "Coastal Serenity",
     description:
       "The storybook village of Carmel-by-the-Sea offers white sand beaches, world-class art galleries, and Michelin-starred restaurants — all at your doorstep.",
-    image:
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=80",
+    image: wix("51ee30_2fcc9b217cde41c989358fe3c033d37c~mv2.jpg"),
   },
 ];

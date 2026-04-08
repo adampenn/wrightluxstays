@@ -2,6 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { properties, locations } from "@/lib/properties";
 
+const HERO_IMAGE =
+  "https://static.wixstatic.com/media/51ee30_f091860c7687488c918d92d68067f7ec~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_90/51ee30_f091860c7687488c918d92d68067f7ec~mv2.jpg";
+
 export default function Home() {
   const featuredProperties = properties.slice(0, 3);
 
@@ -10,7 +13,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=85"
+          src={HERO_IMAGE}
           alt="Luxury vacation rental — Wright Lux Stays"
           fill
           priority
